@@ -1,0 +1,70 @@
+$red: $highlight-color;
+$orange: #E67E22;
+$yellow: #F39C12;
+$green: #F1C40F;
+$blue: #87D37C;
+
+.progress {
+  font-size: 1.2em;
+  height: 30px;
+  &--active {
+    border: 1px solid lighten($text-color,50%);
+  }
+  &--active .progress__bar {
+    opacity: 1;
+  }
+
+  &__text {
+    width: 100%;
+    min-width: 200px;
+    padding: 0 0.9em;
+    text-align: left;
+    position: absolute;
+    margin-top: 5px;
+    left: 0;
+  }
+
+  &__bar {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    display: block;
+    position: relative;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+    background-size: 100px 30px, 130px 30px, 130px 30px;
+    background-position: -20% center, right center, left center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    transition: opacity 0.2s ease, width 0.8s ease-out, background-color 1s ease, border-color 0.3s ease, box-shadow 1s ease;
+    animation: pulse 2s ease-out infinite;
+    background: $red;
+    &--orange {
+      background: $orange;
+    }
+    &--yellow {
+      background: $yellow;
+    }
+    &--green {
+      background: $green;
+    }
+    &--blue {
+      background: $blue;
+    }
+  }
+  &--complete {
+    .progress__bar {
+      animation: none;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: -50% center, right center, left center;
+  }
+  100% {
+    background-position: 150% center, right center, left center;
+  }
+}

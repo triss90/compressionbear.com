@@ -1,0 +1,21 @@
+section.example {
+  background-color: $highlight-color;
+  padding: 100px 0;
+  h2,h3,p {
+    color: $background-color;
+    margin: 0;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  span {
+    color: $text-color;
+    font-weight: bold;
+  }
+  img {
+    max-width: calc(100% - 100px);
+    margin: 50px 50px 20px 50px;
+    border-radius: 5px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.5);
+  }
+}

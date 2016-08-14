@@ -1,0 +1,25 @@
+.dropzone {
+  //min-height: 150px;
+  border: 2px dashed $text-color;
+  border-radius: 30px;
+  padding: 20px 20px;
+  &.dz-drag-hover {
+    border-style: solid;
+    opacity: .7;
+  }
+  .dz-image, .dz-details, .dz-progress, .dz-error-message, .dz-success-mark, .dz-error-mark {
+    display: none;
+  }
+  .dz-default {
+    margin: 30px 0;
+    span.upload-size {
+      font-weight: bold;
+      color: lighten($text-color, 35%);
+    }
+  }
+  svg#upload {
+    g#Desktop-HD {
+      fill: lighten($text-color, 20%);
+    }
+  }
+}

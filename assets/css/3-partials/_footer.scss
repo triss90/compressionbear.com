@@ -1,0 +1,15 @@
+footer {
+  text-align: center;
+  background: $highlight-color;
+  padding: 75px;
+  .author {
+    color: $background-color;
+    font-weight: bold;
+    a {
+      color: $background-color;
+      &:hover {
+        color: $background-color;
+      }
+    }
+  }
+}
