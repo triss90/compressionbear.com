@@ -153,7 +153,7 @@
               </g>
           </g>
       </svg><br>
-      Drop your .jpg or .png file here! <br> <span class="upload-size">Max 2 MB</span>',
+      Drop your .jpg or .png file here! <br> <span class="upload-size">Max 5 MB</span>',
       dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
       dictFallbackText: "Please use the fallback form below to upload your files like in the olden days.",
       dictFileTooBig: "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.",
