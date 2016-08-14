@@ -66,7 +66,7 @@ if(isset($_FILES['file'])) {
   $expensions= array("jpeg","jpg","png");
 
   if(in_array($file_ext,$expensions) === false) {
-    $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+    $errors[]="Our bears can't compress that file, please choose a JPEG or PNG file.";
   }
 
   if($file_size > 5242880) {
@@ -122,6 +122,6 @@ https://pngquant.org/php.html
 http://askubuntu.com/questions/469171/pngquant-2-0-for-ubuntu-12-04-not-available
 
 Set permissions to upload folder
-chmod 777 -R /var/www/gridder.io/public_html/
-chown root:root -R /var/www/gridder.io/public_html/
+chmod 777 -R /var/www/compressionbear.com/public_html/uploads/
+chown root:root -R /var/www/compressionbear.com/public_html/uploads/
 */

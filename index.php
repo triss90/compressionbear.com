@@ -117,7 +117,7 @@
 
     $(".dropzone").dropzone({
       success: function(file, response){
-        //console.log(response);
+        console.log(response);
         var obj = jQuery.parseJSON(response);
         var info = $('.result__info');
         var download = $('.download');

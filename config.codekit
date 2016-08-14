@@ -600,35 +600,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/uploads\/1471158574_comp_bear.jpg": {
+	"\/uploads\/1471180454_comp_bear.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4096,
-		"inputAbbreviatedPath": "\/uploads\/1471158574_comp_bear.jpg",
-		"outputAbbreviatedPath": "\/uploads\/1471158574_comp_bear.jpg",
+		"initialSize": 81920,
+		"inputAbbreviatedPath": "\/uploads\/1471180454_comp_bear.jpg",
+		"outputAbbreviatedPath": "\/uploads\/1471180454_comp_bear.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/uploads\/1471171390_comp_bear.png": {
+	"\/uploads\/1471187084_bear.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 12288,
-		"inputAbbreviatedPath": "\/uploads\/1471171390_comp_bear.png",
-		"outputAbbreviatedPath": "\/uploads\/1471171390_comp_bear.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/uploads\/1471171428_comp_bear.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 20480,
-		"inputAbbreviatedPath": "\/uploads\/1471171428_comp_bear.png",
-		"outputAbbreviatedPath": "\/uploads\/1471171428_comp_bear.png",
+		"initialSize": 3.69741e+06,
+		"inputAbbreviatedPath": "\/uploads\/1471187084_bear.png",
+		"outputAbbreviatedPath": "\/uploads\/1471187084_bear.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
