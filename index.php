@@ -51,8 +51,8 @@
           </div>
 
           <div class="result">
-            <p class=result__info></p>
-            <a class="download" href="/" target="_blank" download>Download</a>
+            <span class=result__info></span>
+
             <a class="back" href="/">Compress another image</a>
           </div>
 
@@ -116,15 +116,18 @@
     <script>
 
     $(".dropzone").dropzone({
-      success: function(file, response){
+      // accept: function(file, done) {
+      //   console.log(file);
+      //   if (file.type != "image/jpeg" && file.type != "image/png") {
+      //     done("Error! Files of this type are not accepted");
+      //   }
+      //     else { done(); }
+      //   }
+      // }
+      success: function(file, response) {
         console.log(response);
-        var obj = jQuery.parseJSON(response);
         var info = $('.result__info');
-        var download = $('.download');
-        var result = "Original: <strong>"+obj.source_size+"</strong> &#8594; Compressed: <strong>"+obj.dest_size+"</strong> (Reduced: <strong>"+obj.compression+"%</strong>)";
-        var path = obj.dest_path;
-        download.attr("href", path);
-        info.append(result);
+        info.append(response);
       }
     });
     </script>

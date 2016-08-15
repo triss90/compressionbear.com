@@ -2,39 +2,15 @@
 //Compression function
 function compress_image($source_url, $destination_url, $quality) {
   $info = getimagesize($source_url);
-
-  if ($info['mime'] == 'image/jpeg') $image = imagecreatefromjpeg($source_url);
-  elseif ($info['mime'] == 'image/gif') $image = imagecreatefromgif($source_url);
-  elseif ($info['mime'] == 'image/png') $image = imagecreatefrompng($source_url);
-
-  imagejpeg($image, $destination_url, $quality);
-
+  if ($info['mime'] == 'image/jpeg') {
+    $image = imagecreatefromjpeg($source_url);
+    imagejpeg($image, $destination_url, $quality);
+  } elseif ($info['mime'] == 'image/png') {
+    $image = imagecreatefrompng($source_url);
+    imagejpeg($image, $destination_url, $quality);
+  }
   return $destination_url;
 }
-
-// function compress_image($source_url, $max_quality = 90) {
-//
-//     if (!file_exists($source_url)) {
-//         throw new Exception("File does not exist: $source_url");
-//     }
-//
-//     $min_quality = 60;
-//
-//     $compressed_png_content = shell_exec("pngquant --quality=$min_quality-$max_quality - < ".escapeshellarg($source_url));
-//
-//     if (!$compressed_png_content) {
-//         throw new Exception("Conversion to compressed PNG failed. Is pngquant 1.8+ installed on the server?");
-//     }
-//
-//     return $compressed_png_content;
-// }
-
-
-
-
-
-
-
 
 // Format Bytes to KB
 function formatBytes($bytes, $precision = 2) {
@@ -55,7 +31,7 @@ function formatBytes($bytes, $precision = 2) {
 // Upload image
 if(isset($_FILES['file'])) {
   $timestamp = time();
-  $errors= array();
+  //$errors = array();
   $file_name = $timestamp.'_'.$_FILES['file']['name'];
   $file_name_compressed = $timestamp.'_comp_'.$_FILES['file']['name'];
   $file_size = $_FILES['file']['size'];
@@ -66,14 +42,14 @@ if(isset($_FILES['file'])) {
   $expensions= array("jpeg","jpg","png");
 
   if(in_array($file_ext,$expensions) === false) {
-    $errors[]="Our bears can't compress that file, please choose a JPEG or PNG file.";
+    $errors = "Our bears can't compress that file, please choose a JPEG or PNG file.";
   }
 
   if($file_size > 5242880) {
-    $errors[]='File size less than 5 MB';
+    $errors = "File size less than 5 MB";
   }
 
-  if(empty($errors)==true) {
+  if(!isset($errors)==true) {
 
     move_uploaded_file($file_tmp,"uploads/".$file_name);
 
@@ -100,17 +76,14 @@ if(isset($_FILES['file'])) {
     $source_photo_size = formatBytes($source_photo_size);
     $dest_photo_size = formatBytes($dest_photo_size);
 
-    //echo 'Original: <strong>'.$source_photo_size.'</strong> &#8594; Compressed: <strong>'.$dest_photo_size.'</strong> (Reduced: <strong>'.$compression_percent.'%</strong>)';
-
-    echo '{
-        "source_size": "'.$source_photo_size.'",
-        "dest_size": "'.$dest_photo_size.'",
-        "dest_path": "'.$dest_photo_path.'",
-        "compression": "'.$compression_percent.'"
-      }';
+    echo "Original: <strong>".$source_photo_size."</strong> &#8594;
+          Compressed: <strong>".$dest_photo_size."</strong>
+          (Reduced: <strong>".$compression_percent."%</strong>)
+          <br>
+          <a class='download' href='/".$dest_photo_path."' target='_blank' download>Download</a>";
 
   } else {
-    print_r($errors);
+    echo $errors;
   }
 
 }
