@@ -1362,6 +1362,7 @@ section.upload {
         width: 100vw;
         top: 0;
         left: 0;
+        padding: 10px 0;
         box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
         background: #424141; } }
 
@@ -1374,6 +1375,9 @@ section.upload {
   display: none; }
   .result p {
     margin: 25px 0 10px 0; }
+  .result .error_msg {
+    color: #FF5964;
+    font-weight: bold; }
   .result .download {
     background: #FF5964;
     color: white;

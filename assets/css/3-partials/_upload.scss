@@ -65,6 +65,7 @@ section.upload {
       width: 100vw;
       top: 0;
       left: 0;
+      padding: 10px 0;
       box-shadow: 0 3px 30px rgba(0,0,0,0.5);
       background: $text-color;
     }
@@ -82,6 +83,10 @@ section.upload {
   display: none;
   p {
     margin: 25px 0 10px 0;
+  }
+  .error_msg {
+    color: $highlight-color;
+    font-weight: bold;
   }
   .download {
     background: $highlight-color;

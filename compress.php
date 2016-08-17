@@ -42,7 +42,8 @@ if(isset($_FILES['file'])) {
   $expensions= array("jpeg","jpg","png");
 
   if(in_array($file_ext,$expensions) === false) {
-    $errors = "Our bears can't compress that file, please choose a JPEG or PNG file.";
+    $errors = "<p class='error_msg'>Our bears can't compress that file, please choose a JPEG or PNG file.</p>
+              <br><br><a class='back' href='/'>Compress a JPEG or PNG</a>";
   }
 
   if($file_size > 5242880) {
@@ -80,7 +81,8 @@ if(isset($_FILES['file'])) {
           Compressed: <strong>".$dest_photo_size."</strong>
           (Reduced: <strong>".$compression_percent."%</strong>)
           <br>
-          <a class='download' href='/".$dest_photo_path."' target='_blank' download>Download</a>";
+          <a class='download' href='/".$dest_photo_path."' target='_blank' download>Download</a>
+          <a class='back' href='/'>Compress another image</a>";
 
   } else {
     echo $errors;

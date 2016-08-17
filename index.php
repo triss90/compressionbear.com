@@ -53,7 +53,7 @@
           <div class="result">
             <span class=result__info></span>
 
-            <a class="back" href="/">Compress another image</a>
+            
           </div>
 
         </div>

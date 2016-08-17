@@ -918,6 +918,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/uploads\/1471434041_comp_bear.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12288,
+		"inputAbbreviatedPath": "\/uploads\/1471434041_comp_bear.jpg",
+		"outputAbbreviatedPath": "\/uploads\/1471434041_comp_bear.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		}
 	},
 "hooks": [
