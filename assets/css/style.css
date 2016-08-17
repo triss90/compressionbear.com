@@ -1271,8 +1271,13 @@ code {
   border-radius: 30px;
   padding: 20px 20px; }
   .dropzone.dz-drag-hover {
-    border-style: solid;
-    opacity: .7; }
+    border-color: #FF5964;
+    opacity: 1;
+    background: #FF5964; }
+    .dropzone.dz-drag-hover .dz-message span, .dropzone.dz-drag-hover .dz-message span.upload-size {
+      color: #EEEEEE; }
+    .dropzone.dz-drag-hover .dz-message svg#upload g#Desktop-HD {
+      fill: #EEEEEE; }
   .dropzone .dz-image, .dropzone .dz-details, .dropzone .dz-progress, .dropzone .dz-error-message, .dropzone .dz-success-mark, .dropzone .dz-error-mark {
     display: none; }
   .dropzone .dz-default {

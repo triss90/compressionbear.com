@@ -4,8 +4,20 @@
   border-radius: 30px;
   padding: 20px 20px;
   &.dz-drag-hover {
-    border-style: solid;
-    opacity: .7;
+    //border-style: solid;
+    border-color: $highlight-color;
+    opacity: 1;
+    background: $highlight-color;
+    .dz-message {
+      span, span.upload-size {
+        color: $background-color;
+      }
+      svg#upload {
+        g#Desktop-HD {
+          fill: $background-color;
+        }
+      }
+    }
   }
   .dz-image, .dz-details, .dz-progress, .dz-error-message, .dz-success-mark, .dz-error-mark {
     display: none;

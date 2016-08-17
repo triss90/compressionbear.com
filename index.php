@@ -116,16 +116,7 @@
     <script>
 
     $(".dropzone").dropzone({
-      // accept: function(file, done) {
-      //   console.log(file);
-      //   if (file.type != "image/jpeg" && file.type != "image/png") {
-      //     done("Error! Files of this type are not accepted");
-      //   }
-      //     else { done(); }
-      //   }
-      // }
       success: function(file, response) {
-        console.log(response);
         var info = $('.result__info');
         info.append(response);
       }
