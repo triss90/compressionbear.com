@@ -1,8 +1,7 @@
 section.upload {
-  background-image: url('/assets/img/compression_bear.svg');
-  background-repeat: no-repeat;
+  background-image: url('/assets/img/square_bg.png');
+  background-repeat: repeat;
   padding-bottom: 75px;
-  background-position: 20% center;
   height: 700px;
   @media(max-width: 768px) {
     padding-top: 100px;
