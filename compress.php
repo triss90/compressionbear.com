@@ -37,7 +37,8 @@ if(isset($_FILES['file'])) {
   $file_size = $_FILES['file']['size'];
   $file_tmp = $_FILES['file']['tmp_name'];
   $file_type = $_FILES['file']['type'];
-  $file_ext=strtolower(end(explode('.',$_FILES['file']['name'])));
+  $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+// $file_ext  = strtolower(end(explode('.', $file_name)));
 
   $expensions= array("jpeg","jpg","png");
 
